@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+
+  <title><![CDATA[Maz-dev]]></title>
+  <link href="http://maz-dev.cc/atom.xml" rel="self"/>
+  <link href="http://maz-dev.cc/"/>
+  <updated>2014-06-03T23:24:48+02:00</updated>
+  <id>http://maz-dev.cc/</id>
+  <author>
+    <name><![CDATA[Maz-dev]]></name>
+    <email><![CDATA[contact@maz-dev.cc]]></email>
+  </author>
+  <generator uri="http://octopress.org/">Octopress</generator>
+
+  
+  <entry>
+    <title type="html"><![CDATA[Rails4 and Cancan]]></title>
+    <link href="http://maz-dev.cc/blog/2014/06/03/rails4-and-cancan/"/>
+    <updated>2014-06-03T22:35:49+02:00</updated>
+    <id>http://maz-dev.cc/blog/2014/06/03/rails4-and-cancan</id>
+    <content type="html"><![CDATA[<h2>How to overcome the ActiveModel::ForbiddenAttributesError</h2>
+
+<p>Usually when starting a rails project, I only had to manage a few users able to edit the content of the site. All the other interacting with this content but not handling it directly.</p>
+
+<p>But this changed recently as I worked on Crassier, an open source app to manage local events (gigs, cinema etc..). The content’s editor is the user itself.</p>
+
+<p>To deal with roles I used cancan, and this is awesome.</p>
+
+<p>BUT I got a nasty error. ActiveModel::ForbiddenAttributesError ..</p>
+
+<p>This issue is already known. See <a href="https://github.com/ryanb/cancan/issues/835">https://github.com/ryanb/cancan/issues/835</a></p>
+
+<p>TLDR: Insert this block in your application_controller</p>
+
+<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+<span class='line-number'>5</span>
+</pre></td><td class='code'><pre><code class='ruby'><span class='line'><span class="n">before_filter</span> <span class="k">do</span>
+</span><span class='line'>  <span class="n">resource</span> <span class="o">=</span> <span class="n">controller_path</span><span class="o">.</span><span class="n">singularize</span><span class="o">.</span><span class="n">gsub</span><span class="p">(</span><span class="s1">&#39;/&#39;</span><span class="p">,</span> <span class="s1">&#39;_&#39;</span><span class="p">)</span><span class="o">.</span><span class="n">to_sym</span>
+</span><span class='line'>  <span class="nb">method</span> <span class="o">=</span> <span class="s2">&quot;</span><span class="si">#{</span><span class="n">resource</span><span class="si">}</span><span class="s2">_params&quot;</span>
+</span><span class='line'>  <span class="n">params</span><span class="o">[</span><span class="n">resource</span><span class="o">]</span> <span class="o">&amp;&amp;=</span> <span class="nb">send</span><span class="p">(</span><span class="nb">method</span><span class="p">)</span> <span class="k">if</span> <span class="nb">respond_to?</span><span class="p">(</span><span class="nb">method</span><span class="p">,</span> <span class="kp">true</span><span class="p">)</span>
+</span><span class='line'><span class="k">end</span>
+</span></code></pre></td></tr></table></div></figure>
+
+]]></content>
+  </entry>
+  
+</feed>
