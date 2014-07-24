@@ -20,7 +20,7 @@ But hey, where's my productivity? I'm working alone on Crassier and I need some 
  So I tried to reimplement it in Sails, express and even gave a try to loopback. I learned Emberjs, I love it so much.
  All these solutions requires a lot of boilerplate, except perhaps for Sails, which is getting at the quality level of Rails very quickly.
 
-Then I decided to give meteor a try. I purchased the [discover meteor book]("discovermeteor.com"), followed the awesomely clear and well written project
+Then I decided to give meteor a try. I purchased the ["discover meteor book"]("discovermeteor.com"), followed the awesomely clear and well written project
 tutorial. I had so much fun. This is a smart framework, created by smart people. I was about to give up on node, as I don't need extreme scaling for my pet projects,
  and here comes meteor. To put it simply, real time capability comes free with the framework, the front and the server can share a **LOT** of code and the templating and
  rendering engine is pretty nice.
