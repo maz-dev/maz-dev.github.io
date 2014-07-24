@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "Joins in Meteor"
-date: 2014-07-08 11:35:32 +0200
+date: 2014-07-24 11:35:32 +0200
 comments: true
 categories: Meteor
 ---
