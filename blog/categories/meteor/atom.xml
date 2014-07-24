@@ -4,7 +4,7 @@
   <title><![CDATA[Category: Meteor | Maz-dev]]></title>
   <link href="http://maz-dev.cc/blog/categories/meteor/atom.xml" rel="self"/>
   <link href="http://maz-dev.cc/"/>
-  <updated>2014-07-08T12:50:27+02:00</updated>
+  <updated>2014-07-24T12:47:27+02:00</updated>
   <id>http://maz-dev.cc/</id>
   <author>
     <name><![CDATA[Maz-dev]]></name>
@@ -82,6 +82,20 @@ I will soon update it with the meteor version.</p>
  I do my job because I love to create things, Meteor allows me to do it in an exciting way. I&rsquo;m still amazed by the ease of use of this framework.</p>
 
 <p> Infinite kudos to the meteor team and community.</p>
+]]></content>
+  </entry>
+  
+  <entry>
+    <title type="html"><![CDATA[Joins in Meteor]]></title>
+    <link href="http://maz-dev.cc/blog/2014/07/08/joins-in-meteor/"/>
+    <updated>2014-07-08T11:35:32+02:00</updated>
+    <id>http://maz-dev.cc/blog/2014/07/08/joins-in-meteor</id>
+    <content type="html"><![CDATA[<p>Joins in meteor are not a big deal, but you have to make them reactive.
+You can overpublish, denormalize or just do it the right way with a reactive publish.</p>
+
+<p>I&rsquo;m using a package to do this for me, <a href="" title="http://atmospherejs.com/package/publish-composite">Publish composite</a>.</p>
+
+<p>Of all the packages helping you to make your publications reactive, this is the one that I got to work easily.</p>
 ]]></content>
   </entry>
   
